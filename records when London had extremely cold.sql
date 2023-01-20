@@ -3,7 +3,7 @@
 
 --Note: Weather is considered to be extremely cold then its temperature is less than zero.
 
---Table Structure:
+--Table Structure
 
 drop table weather;
 create table weather
@@ -23,6 +23,9 @@ insert into weather values
 (6, 'London', -5, CONVERT(DATETIME, '2021-01-06')),
 (7, 'London', -7,CONVERT(DATETIME, '2021-01-07')),
 (8, 'London', 5, CONVERT(DATETIME, '2021-01-08'));
+
+
+
 SELECT Id,city , temperature, day
 FROM (
 	select * ,
@@ -41,5 +44,4 @@ FROM (
 		ELSE NULL
 	END Flag 
     from weather ) X
-WHERE X.flag = 'YES'
-	;
+WHERE X.flag = 'YES'؛
